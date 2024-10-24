@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google Maps Directions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assests/style.css" />
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLh5GbUdoHNCbEtWkcRiXYh7-PchQX1lw&callback=initMap&libraries=places"
+    ></script>
+  </head>
+
+  <body class="bg-gray-100 font-roboto">
+    <div class="wrapper">
+      <div class="sidebar">
+        <div class="flex items-center mb-4">
+          <img
+            alt="Google Maps Logo"
+            class="mr-4"
+            height="50"
+            src="https://cdn.vox-cdn.com/thumbor/KqYnd6YgxZ6yJvyBCk-heGXYEMM=/0x0:1280x800/1400x1400/filters:focal(640x400:641x401)/cdn.vox-cdn.com/uploads/chorus_asset/file/19700731/googlemaps.png"
+            width="50"
+          />
+          <h1 class="text-2xl font-bold">Google Maps</h1>
+        </div>
+
+        <div class="mb-4">
+          <div class="relative">
+            <input
+              id="location-input"
+              class="p-2 w-full border rounded"
+              placeholder="Search location"
+              type="text"
+            />
+          </div>
+          <input
+            id="destination-input"
+            class="p-2 w-full border rounded mt-2"
+            placeholder="Search destination"
+            type="text"
+          />
+          <button id="estimate-time-btn" class="mt-2">Estimate Time</button>
+          <div id="time-estimate" class="mt-2"></div>
+
+          <div class="box-wrapper mt-4">
+            <div class="categories flex space-x-4">
+              <i id="parks-btn" class="fas fa-tree"></i>
+              <i id="shopping-btn" class="fas fa-shopping-cart"></i>
+              <i id="gas-btn" class="fas fa-gas-pump"></i>
+              <i id="coffee-btn" class="fas fa-mug-hot"></i>
+              <i id="groceries-btn" class="fas fa-store"></i>
+            </div>
+            <button id="toggle-traffic" class="mt-2">Toggle Traffic</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="map"></div>
+    </div>
+    <script src="assests/script.js"></script>
+  </body>
+</html>
